@@ -1,4 +1,4 @@
-import {MigrationInterface, QueryRunner, Table} from 'typeorm';
+import { MigrationInterface, QueryRunner, Table } from 'typeorm';
 
 export class CreateAppointments1587169184115 implements MigrationInterface {
     public async up(queryRunner: QueryRunner): Promise<any> {
@@ -10,7 +10,8 @@ export class CreateAppointments1587169184115 implements MigrationInterface {
                         name: 'id',
                         type: 'varchar',
                         isPrimary: true,
-                        generationStrategy: 'uuid'
+                        generationStrategy: 'uuid',
+                        default: 'uuid_generate_v4()'
                     },
                     {
                         name: 'provider',
