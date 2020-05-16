@@ -14,8 +14,4 @@
   "cli": {
     "migrationsDir": "./src/database/migrations"
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> e99824fba0fd7f5bd79649ff0afbe800ff63e823
