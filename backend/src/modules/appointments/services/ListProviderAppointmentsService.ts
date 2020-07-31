@@ -4,6 +4,8 @@ import Appointment from '../infra/typeorm/entities/Appointment';
 import IAppointmentsRespository from '../repositories/IAppointmentsRepository';
 import ICacheProvider from '@shared/container/providers/CacheProvider/models/ICacheProvider';
 
+import { classToClass } from 'class-transformer';
+
 interface IRequest {
   provider_id: string;
   day: number;
@@ -45,7 +47,7 @@ class ListProviderAppointmentsService {
 
       await this.cacheProvider.save(
         cacheKey,
-        appointments,
+        classToClass(appointments),
       );
     }
 
