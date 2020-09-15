@@ -19,7 +19,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 
 const Input: React.FC<InputProps> = ({
   name,
-  containerStyle= {},
+  containerStyle = {},
   icon: Icon,
   ...rest
 }) => {
@@ -54,6 +54,7 @@ const Input: React.FC<InputProps> = ({
       isErrored={!!error}
       isFielled={isFielled}
       isFocused={isFocused}
+      data-testid="input-container"
     >
       {Icon && <Icon size={20} />}
       <input
